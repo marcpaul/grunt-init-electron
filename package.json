@@ -1,0 +1,22 @@
+{
+  "name": "grunt-init-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcpaul/grunt-init-electron.git"
+  },
+  "author": "marcpaul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcpaul/grunt-init-electron/issues"
+  },
+  "homepage": "https://github.com/marcpaul/grunt-init-electron#readme",
+  "dependencies": {
+    "deepmerge": "^2.0.1"
+  }
+}
