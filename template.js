@@ -6,11 +6,11 @@ exports.notes = 'Make sure you initialized your project with _electron-forge ini
 
 exports.template = function(grunt, init, done) {
   init.process({}, [
-    init.prompt('description'),
-    init.prompt('repository'),
-    init.prompt('author_name'),
-    init.prompt('homepage'),
-    init.prompt('licenses')
+    // init.prompt('description'),
+    // init.prompt('repository'),
+     init.prompt('author_name'),
+    // init.prompt('homepage'),
+    // init.prompt('licenses')
 
   ], function(err, props) {
 
@@ -29,14 +29,15 @@ exports.template = function(grunt, init, done) {
     }
 
     const files = init.filesToCopy(props)
-    init.addLicenseFiles(files, props.licenses)
+    init.addLicenseFiles(files, ['MIT'])
     init.copyAndProcess(files, props)
 
     const pkg = grunt.file.readJSON('./package.json')
     delete pkg.devDependencies['eslint-config-airbnb']
 
+    grunt.file.delete('node_modules')
     const newPackage = deepmerge(pkg, props)
-    init.writePackageJSON('package.json', newPackage)
+    init.writePackageJSON('package.json', newPackage, () => {return newPackage})
 
     done()
   })
