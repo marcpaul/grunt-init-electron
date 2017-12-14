@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/marcpaul/grunt-init-electron#readme",
   "dependencies": {
-    "deepmerge": "^2.0.1"
+    "deepmerge": "^2.0.1",
+    "electron-icon-maker": "0.0.4"
   }
 }
